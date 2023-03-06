@@ -16,6 +16,8 @@ jobs:
           /repos/${{ github.repository }}/commits/${{ github.head_ref }}/check-runs |
           jq ".check_runs[].id")
           
+          echo "${CR}"
+          
           gh api \
           --method POST \
           -H "Accept: application/vnd.github+json" \
