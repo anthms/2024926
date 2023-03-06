@@ -6,7 +6,7 @@ jobs:
   job-name:
     runs-on: ubuntu-latest
     steps:
-      - run: "${{ github.sha }}"
+      - run: echo "${{ github.sha }}"
       - env:
           GH_TOKEN: ${{ github.token }}
         run: |
